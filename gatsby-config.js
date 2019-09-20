@@ -38,6 +38,8 @@ const plugins = [
 ];
 
 module.exports = client.getEntries().then(entries => {
+  console.log('entries: ', entries);
+  
   const { mediumUser } = entries.items.find(getAboutEntry).fields;
 
   plugins.push({
